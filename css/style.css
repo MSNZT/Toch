@@ -1,0 +1,457 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: 400;
+  font-display: swap;
+  src: url("..//fonts/Gilroy-Regular.woff2") format("woff2"), url("..//fonts/Gilroy-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: Gilroy;
+  font-weight: 500;
+  font-display: swap;
+  src: url("..//fonts/Gilroy-Medium.woff2") format("woff2"), url("..//fonts/Gilroy-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: Gilroy;
+  font-weight: 600;
+  font-display: swap;
+  src: url("..//fonts/Gilroy-SemiBold.woff2") format("woff2"), url("..//fonts/Gilroy-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: Gilroy;
+  font-weight: 700;
+  font-display: swap;
+  src: url("..//fonts/Gilroy-Bold.woff2") format("woff2"), url("..//fonts/Gilroy-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-display: swap;
+  src: url("..//fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("..//fonts/Gilroy-ExtraBold.woff") format("woff");
+}
+.page {
+  height: 100%;
+}
+
+.page-body {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (max-width: 950px) {
+  .container {
+    max-width: 690px;
+    padding: 0 39px;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    min-width: 330px;
+    padding: 0 22px;
+  }
+}
+
+.header {
+  background: rgba(242, 247, 255, 0.5);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+.header__container {
+  padding-top: 32px;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.header__logo img {
+  display: block;
+}
+.header__logo p {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 21px;
+  color: #1D2530;
+  margin: 0;
+  margin-left: 10px;
+}
+@media (max-width: 650px) {
+  .header__logo p {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
+}
+
+.user-nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.user-nav__link:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+}
+@media (max-width: 650px) {
+  .user-nav__link {
+    text-align: center;
+    max-width: 177px;
+    padding: 10px 40px;
+  }
+}
+.user-nav .login {
+  background: #f1e4ff;
+  color: #685ed6;
+}
+@media (max-width: 650px) {
+  .user-nav .login {
+    margin-bottom: 11px;
+  }
+}
+.user-nav .signup {
+  color: #ffffff;
+  background: #685ed6;
+  margin-left: 12px;
+}
+@media (max-width: 650px) {
+  .user-nav .signup {
+    margin: 0;
+  }
+}
+@media (max-width: 650px) {
+  .user-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 950px) {
+  .navbar__list {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.navbar__item {
+  margin-left: 63px;
+}
+.navbar__item:first-child {
+  margin-left: 0;
+}
+@media (max-width: 950px) {
+  .navbar__item {
+    margin-left: 24px;
+  }
+}
+.navbar__link {
+  display: inline-block;
+  list-style: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1D2530;
+}
+@media (max-width: 950px) {
+  .navbar__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.navbar .current {
+  font-weight: 700;
+  color: #685ed6;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    position: fixed;
+    top: 60px;
+    right: -237px;
+    height: 250px;
+    width: 237px;
+    background-color: #f8fBff;
+    transition: all 0.5s ease 0s;
+    display: flex;
+    justify-content: center;
+    padding: 32px 30px 20px;
+  }
+}
+@media (max-width: 650px) and (max-width: 650px) {
+  .navbar__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 650px) {
+  .navbar__item {
+    margin: 0;
+  }
+  .navbar__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .navbar.active {
+    right: 0;
+  }
+}
+.auth .navbar {
+  padding: 32px 30px 20px;
+}
+
+.navbar-toggle {
+  display: none;
+}
+@media (max-width: 650px) {
+  .navbar-toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .navbar-toggle .burger {
+    position: absolute;
+    width: 100%;
+    top: 8px;
+    left: 0;
+    height: 2px;
+    background-color: #33afe1;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar-toggle::before, .navbar-toggle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar-toggle::before {
+    top: 0;
+    background: #685ed6;
+  }
+  .navbar-toggle::after {
+    bottom: 0;
+    background: #18e1f7;
+  }
+}
+
+.navbar-toggle.active::before {
+  transform: rotate(45deg);
+  top: 8px;
+  width: 33px;
+  height: 2.5px;
+  background: #685ED6;
+}
+
+.navbar-toggle.active .burger {
+  transform: scale(0);
+}
+
+.navbar-toggle.active::after {
+  transform: rotate(-45deg);
+  top: 8px;
+  width: 33px;
+  height: 2.5px;
+  background: #685ED6;
+}
+
+.popup {
+  position: fixed;
+  top: -1000px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 480px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  min-height: 502px;
+  display: none;
+}
+.popup__wrapper {
+  padding: 105px 70px 0;
+  position: relative;
+}
+.popup__title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 32px;
+  color: #685ED6;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+.popup__btn {
+  background: #685ed6;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  text-align: center;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  padding: 8px 40px 8px 20px;
+  background: #f7f7fd;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 100%;
+}
+.field::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d2530;
+}
+.field::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d2530;
+}
+
+.forget-password {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: #605dec;
+  margin-bottom: 32px;
+}
+
+.field-password {
+  position: relative;
+}
+
+.password-control {
+  position: relative;
+}
+
+.icon-pass {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-45%);
+  color: black;
+}
+.icon-pass:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.popup__close {
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url("..//../img/close.svg");
+}
+
+.active-popup {
+  display: block;
+  animation: bounce 0.6s;
+  top: 100px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

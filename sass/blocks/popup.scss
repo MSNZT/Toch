@@ -1,0 +1,129 @@
+.popup {
+  position: fixed;
+  top: -1000px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 480px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  min-height: 502px;
+  display: none;
+
+  &__wrapper {
+    padding: 105px 70px 0;
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+    color: #685ED6;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    background: #685ed6;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 6px;
+    text-align: center;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  padding: 8px 40px 8px 20px;
+  background: #f7f7fd;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 100%;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1d2530;
+  }
+}
+
+.forget-password {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: #605dec;
+  margin-bottom: 32px;
+}
+
+.field-password {
+  position: relative;
+}
+
+.password-control {
+  position: relative;
+}
+
+.icon-pass {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-45%);
+  color: black;
+
+  &:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url("..//../img/close.svg");
+}
+
+.active-popup {
+  display: block;
+  animation: bounce 0.6s;
+  top: 100px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

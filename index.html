@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+  <title>Tocha - Telegram чат
+    на вашем сайте</title>
+</head>
+
+<body class="page-body auth">
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__top">
+        <a href="index.html" class="header__logo">
+          <picture>
+            <source srcset="img/logo-mobile.png" media="(max-width: 650px)" width="40" height="29">
+            <img src="img/logo-desktop.png" width="55" height="40" alt="logo">
+          </picture>
+          <p>tocha</p>
+        </a>
+        <nav class="navbar">
+          <div class="user-nav">
+            <a class="user-nav__link login" href="#">Вход</a>
+            <a class="user-nav__link signup" href="#">Регистрация</a>
+          </div>
+        </nav>
+        <button class="navbar-toggle">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="burger"></span>
+        </button>
+      </div>
+      <div class="login-popup popup">
+        <div class="popup__wrapper">
+          <h3 class="popup__title">Вход</h3>
+          <form class="form form-login" action="" method="get">
+            <input class="field" type="tel" placeholder="Телефон">
+            <div class="field-password">
+              <label class="password-control">
+                <input class="field password" type="password" placeholder="Пароль">
+                <span class="material-symbols-outlined icon-pass">
+                  visibility_off
+                </span>
+              </label>
+            </div>
+            <a class="forget-password" href="#">Напомнить пароль</a>
+            <a href="main.html" class="popup__btn">Войти</a>
+          </form>
+          <button class="popup__close">
+            <span class="visually-hidden">Закрыть окно входа</span>
+          </button>
+        </div>
+      </div>
+      <div class="signup-pop popup">
+        <div class="popup__wrapper">
+          <form class="form form-signup" action="" method="get">
+            <input class="field" type="tel" placeholder="Телефон">
+            <input class="field" type="email" placeholder="Электронная почта">
+            <div class="field-password">
+              <label class="password-control">
+                <input class="field password" type="password" placeholder="Пароль">
+                <span class="material-symbols-outlined icon-pass">
+                  visibility_off
+                </span>
+              </label>
+            </div>
+
+            <div class="field-password">
+              <label class="password-control">
+                <input class="field password" type="password" placeholder="Повторите пароль">
+                <span class="material-symbols-outlined icon-pass">
+                  visibility_off
+                </span>
+              </label>
+            </div>
+            <a class="forget-password" href="#">Напомнить пароль</a>
+            <a href="main.html" class="popup__btn">Войти</a>
+          </form>
+          <button class="popup__close">
+            <span class="visually-hidden">Закрыть окно входа</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="js/popup.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+
+</html>
