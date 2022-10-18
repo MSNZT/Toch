@@ -1,0 +1,90 @@
+.connect {
+  &__container {
+    margin-bottom: 90px;
+  }
+
+  &__block {
+    position: relative;
+    min-height: 288px;
+    border-radius: 6px;
+    background-color: $primary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 86px;
+      width: 314px;
+      height: 271px;
+      background-image: url("..//img/phone-connect.svg");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 845px;
+      height: 100%;
+      background-image: url("..//img/bg-connect.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__form {
+    z-index: 50;
+    max-width: 445px;
+    position: absolute;
+    top: 48px;
+    right: 185px;
+
+    legend {
+      font-weight: 800;
+      font-size: 33px;
+      line-height: 41px;
+      color: #fff;
+      padding: 0;
+      margin-bottom: 32px;
+    }
+
+    &-block {
+      display: flex;
+      align-items: center;
+
+      label {
+        z-index: 2;
+      }
+
+      input {
+        padding: 14px 16px;
+        width: 248px;
+        height: 52px;
+        border: 0;
+        border-radius: 5px 0px 0px 5px;
+        outline: none;
+
+        &::placeholder {
+          font-size: 15px;
+          line-height: 24px;
+          color: #474A57;
+        }
+      }
+
+      button {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        height: 48px;
+        padding: 14px 24px;
+        border-radius: 0px 5px 5px 0px;
+        background-color: #18191f;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}

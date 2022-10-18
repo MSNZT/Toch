@@ -1,0 +1,81 @@
+.hero {
+  background-color: rgba(242, 247, 255, 0.5);
+  min-height: 819px;
+  margin-bottom: 100px;
+
+  &__container {
+    position: relative;
+    padding-top: 94px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 68px;
+  }
+
+  .l-column {
+    max-width: 522px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 94px;
+    max-width: 522px;
+    background-repeat: no-repeat;
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-31px);
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  .icon-airplane::before {
+    background-image: url(..//img/airplane.svg);
+  }
+
+  .icon-arrow::before {
+    background-image: url(..//img/arrow.svg);
+  }
+
+  .icon-assistant::before {
+    background-image: url(..//img/assistant.svg);
+  }
+
+  .icon-girl::before {
+    background-image: url(..//img/girl.svg);
+  }
+
+  &__header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  .r-column {
+    position: absolute;
+    right: 100px;
+    top: 70px;
+    width: 425px;
+    height: 667px;
+    background-image: url(..//img/phone.svg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+  }
+}

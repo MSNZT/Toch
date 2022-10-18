@@ -1,0 +1,39 @@
+.main-nav {
+
+  &__list {
+    display: flex;
+
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-left: 63px;
+
+    @media (max-width: 900px) {
+      margin-left: 24px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.link {
+  font-size: 20px;
+  line-height: 26px;
+  color: $secondary;
+
+  @media (max-width: 900px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.current {
+  font-weight: 700;
+  color: $primary;
+}
