@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> -->
   <title>Tocha - Telegram чат на вашем сайте</title>
 </head>
 
@@ -33,7 +34,7 @@
 
       <div class="menu-popup" id="menu-popup"></div>
 
-      <!-- <div class="header-body">
+      <div class="header-body">
         <div class="l-column">
           <h1 class="main-title"><span>Telegram чат</span><br>на вашем сайте</h1>
           <p class="header-body__subtitle">
@@ -42,80 +43,108 @@
           </p>
           <a class="header-body__btn" href="">Подключить</a>
         </div>
-        <div class="r-column"></div>
-      </div> -->
+        <div class="r-column">
+          <img src="img/bg.svg" width="690" height="555" alt="Image phone">
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- <main class="main">
+  <main class="main">
     <section class="hero">
       <div class="hero__container container">
         <div class="l-column">
           <h2 class="hero__title">Tocha Online - это</h2>
           <ul class="hero__list list-reset">
-            <li class="hero__item  icon-airplane">
-              <div class="hero__header">Ничего лишнего</div>
+            <li class="hero__item">
+              <h3 class="hero__header">Ничего лишнего</h3>
               <p class="hero__text">Отсутствие лишних приложений для операторов. Оператору не нужно учиться работать с
                 чатом</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#airplane"></use>
+              </svg>
             </li>
             <li class="hero__item icon-arrow">
-              <div class="hero__header">Простота</div>
+              <h3 class="hero__header">Простота</h3>
               <p class="hero__text">Простая установка на сайт</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
             </li>
             <li class="hero__item icon-assistant">
-              <div class="hero__header">Несколько ассистентов</div>
+              <h3 class="hero__header">Несколько ассистентов</h3>
               <p class="hero__text">Возможность подключения нескольких ассистентов</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#assistant"></use>
+              </svg>
             </li>
             <li class="hero__item icon-girl">
-              <div class="hero__header">Кастомизация</div>
+              <h3 class="hero__header">Кастомизация</h3>
               <p class="hero__text">Настройка интерфейса под нужды сайта</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#girl"></use>
+              </svg>
             </li>
           </ul>
         </div>
-        <div class="r-column"></div>
+        <div class="r-column">
+          <img src="/img/phone.svg" alt="">
+        </div>
       </div>
     </section>
+
 
     <section class="tariffs">
       <div class="tariffs__container container">
         <h2 class="section-title">Тарифы</h2>
         <p class="tariffs__subtitle">Стоимость зависит от трафика сайта</p>
-        <ul class="tariffs__list list-reset">
-          <li class="tariffs__item">
-            <div class="tariffs__block">
-              <h3 class="tariffs__block-title">Бесплатно</h3>
-              <div class="tariffs__block-inner">
-                <h3 class="tariffs__description">Пробный период<br>на 1 месяц</h3>
-                <p class="tariffs__price">0₽/первый месяц</p>
-                <button class="tariffs__btn btn-reset" type="button">Подключить за 0₽</button>
+        <div class="tariffs__slider">
+          <div class="swiper tariffs-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tariffs-slide">
+                <div class="tariffs__item">
+                  <div class="tariffs__block">
+                    <h3 class="tariffs__block-title">Бесплатно</h3>
+                    <div class="tariffs__block-inner">
+                      <h3 class="tariffs__description">Пробный период<br>на 1 месяц</h3>
+                      <p class="tariffs__price">0₽/первый месяц</p>
+                      <button class="tariffs__btn btn-reset" type="button">Подключить за 0₽</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide tariffs-slide">
+                <div class="tariffs__item">
+                  <div class="tariffs__block">
+                    <h3 class="tariffs__block-title">Базовый</h3>
+                    <div class="tariffs__block-inner">
+                      <h3 class="tariffs__description">Менее 1000 посещений в&nbsp;сутки</h3>
+                      <p class="tariffs__price">200₽/месяц</p>
+                      <button class="tariffs__btn btn-reset" type="button">Подключить за 200₽</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide tariffs-slide">
+                <div class="tariffs__item">
+                  <div class="tariffs__block">
+                    <h3 class="tariffs__block-title">Премиум</h3>
+                    <div class="tariffs__block-inner">
+                      <h3 class="tariffs__description">Более 1000 посещений в&nbsp;сутки</h3>
+                      <p class="tariffs__price">500₽/месяц</p>
+                      <button class="tariffs__btn btn-reset" type="button">Подключить за 500₽</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="tariffs__item">
-            <div class="tariffs__block">
-              <h3 class="tariffs__block-title">Базовый</h3>
-              <div class="tariffs__block-inner">
-                <h3 class="tariffs__description">Менее 1000 посещений в сутки</h3>
-                <p class="tariffs__price">200₽/месяц</p>
-                <button class="tariffs__btn btn-reset" type="button">Подключить за 200₽</button>
-              </div>
-            </div>
-          </li>
-          <li class="tariffs__item">
-            <div class="tariffs__block">
-              <h3 class="tariffs__block-title">Премиум</h3>
-              <div class="tariffs__block-inner">
-                <h3 class="tariffs__description">Более 1000 посещений в сутки</h3>
-                <p class="tariffs__price">500₽/месяц</p>
-                <button class="tariffs__btn btn-reset" type="button">Подключить за 500₽</button>
-              </div>
-            </div>
-          </li>
-        </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="steps">
+    <!-- <section class="steps">
       <div class="steps__container container">
         <h2 class="section-title">Всего 3 шага для подключения Telegram чата</h2>
         <ul class="steps__list list-reset">
@@ -145,9 +174,9 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
-    <section class="reviews">
+    <!-- <section class="reviews">
       <div class="reviews__container container">
         <h2 class="section-title">Отзывы клиентов</h2>
         <ul class="reviews__list list-reset">
@@ -183,9 +212,9 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
-    <section class="connect">
+    <!-- <section class="connect">
       <div class="connect__container container">
         <div class="connect__block">
           <form class="connect__form" action="">
@@ -199,10 +228,10 @@
           </form>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <section class="footer-nav">
       <div class="footer-nav__container container">
         <a class="logo" href="auth.html">
@@ -241,6 +270,8 @@
 
   <script src="js/popup.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

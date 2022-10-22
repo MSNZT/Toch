@@ -1,4 +1,6 @@
 .tariffs {
+  overflow: hidden;
+
   &__container {
     margin-bottom: 100px;
   }
@@ -23,7 +25,6 @@
 
   &__item {
     width: 100%;
-    max-width: 350px;
   }
 
   &__block {
@@ -54,8 +55,12 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 40px;
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: 32px;
+
+    @media (max-width: 726px) {
+      max-width: 270px;
+    }
   }
 
   &__price {
@@ -80,4 +85,33 @@
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
     }
   }
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: inline-flex;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -34px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgb(#685ed6, 0.5);
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: #685ed6;
+  border: 1px solid #685ed6;
 }
