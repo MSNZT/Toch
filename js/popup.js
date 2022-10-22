@@ -1,26 +1,3 @@
-// const login = document.querySelector('.login');
-// const loginPopup = document.querySelector('.login-popup');
-// const signUp = document.querySelector('.signup');
-// const signUpPopup = document.querySelector('.signup-pop');
-// const btnShow = document.querySelectorAll('form .icon-pass');
-// const popupBtn = document.querySelectorAll('.popup__btn');
-// let textT = document.querySelector('.popup__wrapper .congr');
-
-// login.addEventListener('click', () => {
-//   loginPopup.classList.add('active-popup');
-// });
-
-// signUp.addEventListener('click', () => {
-//   signUpPopup.classList.add('active-popup');
-// });
-
-// const closePopup = document.querySelectorAll('.popup__close').forEach(close => {
-//   close.addEventListener('click', () => {
-//     signUpPopup.classList.remove('active-popup');
-//     loginPopup.classList.remove('active-popup');
-//   });
-// });
-
 // popupBtn.forEach(btn => {
 //   btn.addEventListener('click', () => {
 //     textT.textContent = 'Поздравляю с успешной регистрацией';
