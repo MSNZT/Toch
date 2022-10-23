@@ -45,3 +45,24 @@ const stepsSlider = new Swiper('.steps-slider', {
   }
 });
 
+const reviewsSlider = new Swiper('.reviews-slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  pagination: {
+    el: '.reviews-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    600: {
+      slidesPerView: 1.5,
+    },
+    900: {
+      slidesPerView: 2,
+    },
+  }
+});
