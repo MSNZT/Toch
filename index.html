@@ -22,6 +22,11 @@
           <a class="user-nav__link" data-popup="login">Вход</a>
           <a class="user-nav__link" data-popup="registration">Регистрация</a>
         </nav>
+
+        <button class="nav-toggle btn-reset">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="burger"></span>
+        </button>
       </div>
 
       <div class="popup" id="login">
@@ -77,6 +82,8 @@
         </div>
       </div>
 
+      <div class="menu-popup" id="menu-popup"></div>
+
       <div class="header-body">
         <div class="l-column">
           <h1 class="main-title"><span>Telegram чат</span><br>на вашем сайте</h1>
@@ -86,7 +93,9 @@
           </p>
           <a class="header-body__btn" href="">Подключить</a>
         </div>
-        <div class="r-column"></div>
+        <div class="r-column">
+          <img src="./img/bg.svg" width="690" height="555" alt="Image phone">
+        </div>
       </div>
     </div>
   </header>
@@ -97,139 +106,179 @@
         <div class="l-column">
           <h2 class="hero__title">Tocha Online - это</h2>
           <ul class="hero__list list-reset">
-            <li class="hero__item  icon-airplane">
-              <div class="hero__header">Ничего лишнего</div>
+            <li class="hero__item">
+              <h3 class="hero__header">Ничего лишнего</h3>
               <p class="hero__text">Отсутствие лишних приложений для операторов. Оператору не нужно учиться работать с
                 чатом</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#airplane"></use>
+              </svg>
             </li>
             <li class="hero__item icon-arrow">
-              <div class="hero__header">Простота</div>
+              <h3 class="hero__header">Простота</h3>
               <p class="hero__text">Простая установка на сайт</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
             </li>
             <li class="hero__item icon-assistant">
-              <div class="hero__header">Несколько ассистентов</div>
+              <h3 class="hero__header">Несколько ассистентов</h3>
               <p class="hero__text">Возможность подключения нескольких ассистентов</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#assistant"></use>
+              </svg>
             </li>
             <li class="hero__item icon-girl">
-              <div class="hero__header">Кастомизация</div>
+              <h3 class="hero__header">Кастомизация</h3>
               <p class="hero__text">Настройка интерфейса под нужды сайта</p>
+              <svg class="icon" viewBox="0 0 68 68" width="68" height="68">
+                <use xlink:href="img/sprite.svg#girl"></use>
+              </svg>
             </li>
           </ul>
         </div>
-        <div class="r-column"></div>
+        <div class="r-column">
+          <img src="./img/phone.svg" alt="">
+        </div>
       </div>
     </section>
 
-    <section class="tariffs">
+
+    <section id="tarrifs" class="tariffs">
       <div class="tariffs__container container">
         <h2 class="section-title">Тарифы</h2>
         <p class="tariffs__subtitle">Стоимость зависит от трафика сайта</p>
-        <ul class="tariffs__list list-reset">
-          <li class="tariffs__item">
-            <div class="tariffs__block">
-              <h3 class="tariffs__block-title">Бесплатно</h3>
-              <div class="tariffs__block-inner">
-                <h3 class="tariffs__description">Пробный период<br>на 1 месяц</h3>
-                <p class="tariffs__price">0₽/первый месяц</p>
-                <button class="tariffs__btn btn-reset" type="button">Подключить за 0₽</button>
+        <div class="tariffs__slider">
+          <div class="swiper tariffs-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tariff-slide">
+                <div class="tariffs__item tariffs__block">
+                  <h3 class="tariffs__block-title">Бесплатно</h3>
+                  <div class="tariffs__block-inner">
+                    <h3 class="tariffs__description">Пробный период<br>на 1 месяц</h3>
+                    <p class="tariffs__price">0₽/первый месяц</p>
+                    <button class="tariffs__btn btn-reset" type="button">Подключить за 0₽</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide tariff-slide">
+                <div class="tariffs__item tariffs__block">
+                  <h3 class="tariffs__block-title">Базовый</h3>
+                  <div class="tariffs__block-inner">
+                    <h3 class="tariffs__description">Менее 1000 посещений в&nbsp;сутки</h3>
+                    <p class="tariffs__price">200₽/месяц</p>
+                    <button class="tariffs__btn btn-reset" type="button">Подключить за 200₽</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide tariff-slide">
+                <div class="tariffs__item tariffs__block">
+                  <h3 class="tariffs__block-title">Премиум</h3>
+                  <div class="tariffs__block-inner">
+                    <h3 class="tariffs__description">Более 1000 посещений в&nbsp;сутки</h3>
+                    <p class="tariffs__price">500₽/месяц</p>
+                    <button class="tariffs__btn btn-reset" type="button">Подключить за 500₽</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="tariffs__item">
-            <div class="tariffs__block">
-              <h3 class="tariffs__block-title">Базовый</h3>
-              <div class="tariffs__block-inner">
-                <h3 class="tariffs__description">Менее 1000 посещений в сутки</h3>
-                <p class="tariffs__price">200₽/месяц</p>
-                <button class="tariffs__btn btn-reset" type="button">Подключить за 200₽</button>
-              </div>
-            </div>
-          </li>
-          <li class="tariffs__item">
-            <div class="tariffs__block">
-              <h3 class="tariffs__block-title">Премиум</h3>
-              <div class="tariffs__block-inner">
-                <h3 class="tariffs__description">Более 1000 посещений в сутки</h3>
-                <p class="tariffs__price">500₽/месяц</p>
-                <button class="tariffs__btn btn-reset" type="button">Подключить за 500₽</button>
-              </div>
-            </div>
-          </li>
-        </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="steps">
       <div class="steps__container container">
-        <h2 class="section-title">Всего 3 шага для подключения Telegram чата</h2>
-        <ul class="steps__list list-reset">
-          <li class="steps__item">
-            <div class="steps__inner">
-              <div class="steps__inner-circle"></div>
-              <h3 class="steps__inner-heading">Telegram bot</h3>
-              <p class="steps__inner-description">Вы создаёте Telegram бота<br>для вашего сайта</p>
-              <div class="steps__image"></div>
+        <h2 class="section-title">Всего 3 шага для подключения Telegram&nbsp;чата</h2>
+        <div class="steps__line">
+          <img src="./img/lines.svg" alt="">
+        </div>
+        <div class="steps__slider">
+          <div class="swiper steps-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide step-slide">
+                <div class="steps__item steps__inner">
+                  <div class="steps__inner-circle"></div>
+                  <h3 class="steps__inner-heading">Telegram bot</h3>
+                  <p class="steps__inner-description">Вы создаёте Telegram бота <br>для&nbsp;вашего&nbsp;сайта</p>
+                  <div class="steps__image">
+                    <img src="./img/phone-1.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide step-slide">
+                <div class="steps__item steps__inner">
+                  <div class="steps__inner-circle"></div>
+                  <h3 class="steps__inner-heading">Подключение Tocha</h3>
+                  <p class="steps__inner-description">Tocha подключает Telegram бота <br>к&nbsp;вашему&nbsp;сайту</p>
+                  <div class="steps__image">
+                    <img src="./img/phone-2.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide step-slide">
+                <div class="steps__item steps__inner">
+                  <div class="steps__inner-circle"></div>
+                  <h3 class="steps__inner-heading">Telegram-чат</h3>
+                  <p class="steps__inner-description">Консультант отвечает <br>на вопросы посетителей сайта</p>
+                  <div class="steps__image">
+                    <img src="./img/phone-3.svg" alt="">
+                  </div>
+                </div>
+              </div>
             </div>
-          </li>
-          <li class="steps__item">
-            <div class="steps__inner">
-              <div class="steps__inner-circle"></div>
-              <h3 class="steps__inner-heading">Подключение Tocha</h3>
-              <p class="steps__inner-description">Tocha подключает Telegram бота<br>к вашему сайту</p>
-              <div class="steps__image"></div>
-            </div>
-          </li>
-          <li class="steps__item">
-            <div class="steps__inner">
-              <div class="steps__inner-circle"></div>
-              <h3 class="steps__inner-heading">Telegram-чат</h3>
-              <p class="steps__inner-description">Консультант отвечает<br>на вопросы посетителей сайта</p>
-              <div class="steps__image"></div>
-            </div>
-          </li>
-        </ul>
+            <div class="swiper-pagination steps-pagination"></div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="reviews">
       <div class="reviews__container container">
         <h2 class="section-title">Отзывы клиентов</h2>
-        <ul class="reviews__list list-reset">
-          <li class="reviews__item comment">
-            <div class="comment__block">
-              <p class="comment__header">Как же удобно!</p>
-              <p class="comment__text">В рамках спецификации современных стандартов, базовые сценарии поведения
-                пользователей, которые представляют собой яркий пример континентально-европейского типа политической
-                культуры, будут преданы социально-демократической анафеме.</p>
-            </div>
-            <div class="client">
-              <img src="img/client1.png" width="56" height="56" alt="Client's photo">
-              <div class="client__info">
-                <span class="client__name">Анна Купер</span>
-                <span class="client__website">romashka.ru</span>
+        <svg class="quote" viewBox="0 0 143 121" width="143" height="121">
+          <use xlink:href="img/sprite.svg#quote"></use>
+        </svg>
+        <div class="swiper reviews-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide review-slide">
+              <div class="comment-block">
+                <p class="comment-block__header">Как же неудобно!</p>
+                <p class="comment-block__text">В рамках спецификации современных стандартов, базовые сценарии поведения
+                  пользователей, которые представляют собой яркий пример континентально-европейского типа политической
+                  культуры, будут преданы социально-демократической анафеме.</p>
+              </div>
+              <div class="client">
+                <img src="./img/client1.png" alt="Фотография клиента">
+                <div class="client__info">
+                  <p class="client__name">Анна Купер</p>
+                  <span class="client__website">romashka.ru</span>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item comment">
-            <div class="comment__block">
-              <p class="comment__header">Теперь мы идем в ногу со временем</p>
-              <p class="comment__text">А ещё интерактивные прототипы превращены в посмешище, хотя само их существование
-                приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные
-                исследования конкурентов формируют сеть.</p>
-            </div>
-            <div class="client">
-              <img src="img/client2.png" width="56" height="56" alt="Client's photo">
-              <div class="client__info">
-                <span class="client__name">Андрей Васильев</span>
-                <span class="client__website">samogon-ont.ru</span>
+            <div class="swiper-slide review-slide">
+              <div class="comment-block">
+                <p class="comment-block__header">Теперь мы идем в ногу со временем</p>
+                <p class="comment-block__text">А ещё интерактивные прототипы превращены в посмешище, хотя само их
+                  существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также
+                  тщательные исследования конкурентов формируют сеть.</p>
+              </div>
+              <div class="client">
+                <img src="./img/client2.png" alt="Фотография клиента">
+                <div class="client__info">
+                  <p class="client__name">Андрей Васильев</p>
+                  <span class="client__website">samogon-ont.ru</span>
+                </div>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+          <div class="swiper-pagination reviews-pagination"></div>
+        </div>
       </div>
     </section>
 
-    <section class="connect">
+    <!-- <section class="connect">
       <div class="connect__container container">
         <div class="connect__block">
           <form class="connect__form" action="">
@@ -243,13 +292,13 @@
           </form>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <section class="footer-nav">
       <div class="footer-nav__container container">
-        <a class="logo" href="index.html">
+        <a class="logo" href="auth.html">
           <img src="img/footer-logo-d.png" width="81" height="59" alt="Logo">
           <span>tocha</span>
         </a>
@@ -281,10 +330,12 @@
         <span class="copyright__title">© 2021 Tocha. Все права защищены</span>
       </div>
     </section>
-  </footer>
+  </footer> -->
 
   <script src="js/popup.js"></script>
-  <script src="js/navbar.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
