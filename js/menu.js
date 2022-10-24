@@ -1,6 +1,9 @@
-const toggleMenuBtn = document.querySelector(".nav-toggle");
+const toggleMenuBtn = document.querySelector("#main-toggle");
+const toggleUserMenuBtn = document.querySelector("#user-toggle");
 const menuPopup = document.querySelector("#menu-popup");
+const userMenu = document.querySelector("#user-menu");
 const menu = document.querySelector("#menuNav").cloneNode(1);
+// const userNav = document.querySelector("#userNav").cloneNode(2);
 const body = document.querySelector(".page-body");
 
 toggleMenuBtn.addEventListener('click', () => {

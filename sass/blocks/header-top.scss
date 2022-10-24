@@ -66,6 +66,10 @@
       margin-left: 12px;
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .nav-toggle {

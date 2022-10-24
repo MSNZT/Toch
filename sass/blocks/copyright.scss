@@ -3,6 +3,14 @@
 
   &__container {
     padding: 23px 0;
+
+    @media (max-width: 1190px) {
+      padding: 23px 40px;
+    }
+
+    @media (max-width: 599.98px) {
+      padding: 23px 20px;
+    }
   }
 
   &__title {

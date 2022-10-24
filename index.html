@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0">
   <title>Tocha - Telegram чат на вашем сайте</title>
 </head>
 
@@ -18,12 +19,12 @@
           <img src="img/logo-desktop.png" width="55" height="40" alt="Logo">
           <span>tocha</span>
         </a>
-        <nav class="user-nav">
+        <nav class="user-nav" id="userNav">
           <a class="user-nav__link" data-popup="login">Вход</a>
           <a class="user-nav__link" data-popup="registration">Регистрация</a>
         </nav>
 
-        <button class="nav-toggle btn-reset">
+        <button class="nav-toggle btn-reset" id="user-toggle">
           <span class="visually-hidden">Открыть меню</span>
           <span class="burger"></span>
         </button>
@@ -42,8 +43,8 @@
                 <span class="material-symbols-outlined icon-pass">visibility_off</span>
               </label>
             </div>
-              <a class="forget-password">Напомнить Пароль</a>
-              <a href="auth.html" class="form__btn">Войти</a>
+            <a class="forget-password">Напомнить Пароль</a>
+            <a href="auth.html" class="form__btn">Войти</a>
           </form>
           <button class="close-btn btn-reset">
             <span class="line1 line"></span>
@@ -72,7 +73,7 @@
                 <span class="material-symbols-outlined icon-pass">visibility_off</span>
               </label>
             </div>
-              <a href="auth.html" class="form__btn">Войти</a>
+            <a href="auth.html" class="form__btn">Войти</a>
           </form>
           <button class="close-btn btn-reset">
             <span class="line1 line"></span>
@@ -82,7 +83,7 @@
         </div>
       </div>
 
-      <div class="menu-popup" id="menu-popup"></div>
+      <div class="menu-popup" id="user-menu"></div>
 
       <div class="header-body">
         <div class="l-column">
@@ -278,24 +279,28 @@
       </div>
     </section>
 
-    <!-- <section class="connect">
+    <section class="connect">
       <div class="connect__container container">
         <div class="connect__block">
+          <div class="connect__image">
+            <img src="./img/phone-connect.svg" width="314" height="271" alt="">
+          </div>
           <form class="connect__form" action="">
             <legend>Подключите Telegram чат уже сегодня</legend>
             <div class="connect__form-block">
-              <label>
+              <label class="connect__label">
                 <input type="email" placeholder="Введите e-mail">
               </label>
-              <button class="btn-reset">Отправить</button>
+              <button class="btn-reset connect__btn">Отправить</button>
             </div>
           </form>
         </div>
       </div>
-    </section> -->
+    </section>
+
   </main>
 
-  <!-- <footer class="footer">
+  <footer class="footer">
     <section class="footer-nav">
       <div class="footer-nav__container container">
         <a class="logo" href="auth.html">
@@ -330,7 +335,7 @@
         <span class="copyright__title">© 2021 Tocha. Все права защищены</span>
       </div>
     </section>
-  </footer> -->
+  </footer>
 
   <script src="js/popup.js"></script>
   <script src="js/menu.js"></script>

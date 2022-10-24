@@ -1,42 +1,65 @@
 .connect {
   &__container {
     margin-bottom: 90px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 54px;
+    }
   }
 
   &__block {
+    display: flex;
+    justify-content: flex-end;
     position: relative;
+    padding: 0 80px;
     min-height: 288px;
     border-radius: 6px;
     background-color: $primary;
+    background-image: url("..//img/bg-connect.svg");
+    background-repeat: no-repeat;
+    background-position: right 70%;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 86px;
-      width: 314px;
-      height: 271px;
-      background-image: url("..//img/phone-connect.svg");
+    @media (max-width: 992px) {
+      padding: 0 30px;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      min-height: 420px;
+      background-image: none;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+
+    @media (max-width: 992px) {
+      left: 30px;
+    }
+
+    @media (max-width: 768px) {
       top: 0;
+      left: 0;
       right: 0;
-      width: 845px;
-      height: 100%;
-      background-image: url("..//img/bg-connect.svg");
-      background-repeat: no-repeat;
+    }
+
+    img {
+      display: block;
+
+      @media (max-width: 768px) {
+        width: 269px;
+        height: 239px;
+        margin: 0 auto;
+      }
     }
   }
 
   &__form {
-    z-index: 50;
+    align-self: center;
     max-width: 445px;
-    position: absolute;
-    top: 48px;
-    right: 185px;
 
     legend {
       font-weight: 800;
@@ -45,46 +68,70 @@
       color: #fff;
       padding: 0;
       margin-bottom: 32px;
+
+      @media (max-width: 992px) {
+        max-width: 321px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 280px;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
     }
 
     &-block {
       display: flex;
       align-items: center;
 
-      label {
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
+
+      .connect__label {
         z-index: 2;
-      }
+        margin: 0;
+        max-width: 248px;
+        width: 100%;
 
-      input {
-        padding: 14px 16px;
-        width: 248px;
-        height: 52px;
-        border: 0;
-        border-radius: 5px 0px 0px 5px;
-        outline: none;
+        @media (max-width: 992px) {
+          max-width: 210px;
+        }
 
-        &::placeholder {
-          font-size: 15px;
-          line-height: 24px;
-          color: #474A57;
+        input {
+          padding: 14px 16px;
+          width: 100%;
+          height: 52px;
+          border: 0;
+          border-radius: 5px 0px 0px 5px;
+          outline: none;
+
+          &::placeholder {
+            font-size: 15px;
+            line-height: 24px;
+            color: #474A57;
+          }
         }
       }
+    }
+  }
 
-      button {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 20px;
-        height: 48px;
-        padding: 14px 24px;
-        border-radius: 0px 5px 5px 0px;
-        background-color: #18191f;
-        color: #fff;
-        cursor: pointer;
+  &__btn {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    height: 48px;
+    padding: 14px 24px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: #18191f;
+    color: #fff;
+    cursor: pointer;
 
-        &:hover {
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-        }
-      }
+    &:hover {
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     }
   }
 }
